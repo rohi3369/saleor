@@ -9,10 +9,11 @@ pipeline {
         }
         stage('docker image build'){
             steps{
-                script{
-                   sh 'docker image build -t saleor:DEV .'
-                   sh ' docker image push sai3369/saleor:DEV'
-                }
+                sh """
+                sudo chown ubuntu:docker /var/run/docker.sock
+                docker image build -t sale:dev .
+                docker image tag sale:dev sai3369/sale:dev
+                docker push sai3369/sale:dev
                 
             }
         }    
