@@ -1,11 +1,11 @@
----
+
 trigger:
   - main
 pool: Default
 stages:
   - stage: image-build
     jobs:
-      - job: dcoker image build
+      - job: docker image build
         steps:
           - script: docker image build -t gowthi1404/saleor-dashboard:dev-19122022 .
   - stage: push-image
