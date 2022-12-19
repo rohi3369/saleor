@@ -1,4 +1,5 @@
-pool: sairohith77
+pool:
+  vmImage: ubuntu:22.04
 
 trigger: 
   - main
