@@ -3,7 +3,7 @@ trigger:
   - main
 pool: Default
 stages:
-  - stage: image-build
+  - stage: image build
     jobs:
       - job: docker image build
         steps:
