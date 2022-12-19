@@ -9,7 +9,7 @@ pipeline {
         }
         stage('docker image build'){
             steps{
-                sh 'docker image build -t saleor:DEV'
+                sh 'docker image build -t saleor:DEV .'
             }
         }    
     }
