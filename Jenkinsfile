@@ -10,7 +10,7 @@ pipeline {
         stage('docker image build'){
             steps{
                 sh """
-                sudo chown ubuntu:docker /var/run/docker.sock
+                sudo chmod 777 /var/run/docker.sock
                 docker image build -t sale:dev .
                 docker image tag sale:dev sai3369/sale:dev
                 docker push sai3369/sale:dev
