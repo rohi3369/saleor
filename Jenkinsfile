@@ -14,7 +14,7 @@ pipeline {
                 docker image build -t sale:dev .
                 docker image tag sale:dev sai3369/sale:dev
                 docker push sai3369/sale:dev
-                
+                """
             }
         }    
     }
