@@ -9,7 +9,11 @@ pipeline {
         }
         stage('docker image build'){
             steps{
-                sh 'docker image build -t saleor:DEV .'
+                script{
+                   sh 'docker image build -t saleor:DEV .'
+                   sh ' docker image push sai3369/saleor:DEV'
+                }
+                
             }
         }    
     }
